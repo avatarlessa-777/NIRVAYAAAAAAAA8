@@ -147,7 +147,7 @@ export function About() {
             initial={{ opacity: 0, y: 10 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="inline-block font-heading font-normal text-sm tracking-[0.2em] uppercase px-5 py-2 rounded-full mb-8"
+            className="inline-block font-heading font-normal text-base md:text-lg tracking-[0.2em] uppercase px-6 py-2.5 rounded-full mb-8"
             style={{
               border: "1px solid rgba(200,148,62,0.3)",
               background: "rgba(200,148,62,0.05)",
@@ -190,11 +190,10 @@ export function About() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
-                  className="text-foreground/70 text-lg md:text-xl"
+                  className="text-foreground/70 text-xl md:text-2xl"
                   style={{ 
                     fontFamily: "'Cormorant Garamond', Georgia, serif", 
                     fontWeight: 400, 
-                    fontSize: "18px",
                     lineHeight: "1.9", 
                     wordSpacing: "2px" 
                   }}

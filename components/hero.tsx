@@ -109,18 +109,17 @@ export function Hero() {
         whileInView={{ opacity: 1, filter: "blur(0px)" }} 
         viewport={{ once: true, amount: 0.5 }} 
         transition={{ duration: 1, ease: "easeOut" }} 
-        className="py-12 md:py-16 flex items-center justify-center" 
+        className="py-8 md:py-10 flex items-center justify-center" 
         style={{ background: "var(--background)" }}
       >
         <p 
           style={{ 
-            fontFamily: "'Cormorant Garamond', Georgia, serif", 
-            fontWeight: 400, 
-            color: "rgba(200,148,62,0.9)", 
-            letterSpacing: "0.03em", 
-            lineHeight: "1.6" 
+            fontFamily: "'Inter', sans-serif", 
+            fontWeight: 200, 
+            color: "rgba(255,255,255,0.7)", 
+            letterSpacing: "0.25em" 
           }} 
-          className="text-xl md:text-2xl lg:text-3xl text-center max-w-3xl px-6"
+          className="text-sm md:text-base lg:text-lg text-center max-w-3xl px-6 uppercase tracking-[0.25em] font-light"
         >
           AI-продакшн полного цикла. Клипы. Реклама. Контент. Анимация.
         </p>

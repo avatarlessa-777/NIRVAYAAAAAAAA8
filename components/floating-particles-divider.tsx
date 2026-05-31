@@ -12,7 +12,7 @@ const particles = [
 
 export function FloatingParticlesDivider() {
   return (
-    <div className="relative h-24 md:h-32 overflow-hidden" style={{ background: "var(--background)" }}>
+    <div className="relative h-12 md:h-16 overflow-hidden" style={{ background: "var(--background)" }}>
       {/* Gradient glow in center */}
       <div 
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full"
