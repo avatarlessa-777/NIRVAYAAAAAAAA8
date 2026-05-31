@@ -141,15 +141,24 @@ export function About() {
       <div className="absolute inset-0 circuit-pattern" />
 
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
-        {/* Centered heading with blur reveal */}
-        <motion.h2
-          initial={{ opacity: 0, filter: "blur(12px)" }}
-          animate={isInView ? { opacity: 1, filter: "blur(0px)" } : {}}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="font-heading font-semibold text-3xl md:text-4xl lg:text-5xl uppercase tracking-[0.12em] leading-tight mb-12 text-center"
-        >
-          Мы не используем технологии — мы ими владеем
-        </motion.h2>
+        {/* Badge above glass container */}
+        <div className="text-center">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+            className="inline-block font-heading font-normal text-xs tracking-[0.2em] uppercase px-4 py-1.5 rounded-full mb-8"
+            style={{
+              border: "1px solid rgba(200,148,62,0.3)",
+              background: "rgba(200,148,62,0.05)",
+              color: "rgba(200,148,62,0.8)",
+              boxShadow: "0 0 15px rgba(200,148,62,0.1), 0 0 30px rgba(200,148,62,0.05)",
+              animation: "pulse 3s ease-in-out infinite"
+            }}
+          >
+            О Nirvaya Studio
+          </motion.span>
+        </div>
 
         {/* Glass container with text content */}
         <motion.div

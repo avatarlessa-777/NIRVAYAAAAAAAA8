@@ -70,6 +70,27 @@ export function Hero() {
               playsinline
               style={{ width: '100%', height: '100%', border: 'none', '--controls': 'none' } as React.CSSProperties}
             />
+            
+            {/* Centered text overlay */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+              className="absolute inset-0 flex items-center justify-center z-10"
+            >
+              <span
+                className="font-heading font-bold text-xl md:text-3xl lg:text-4xl uppercase tracking-[0.1em] text-center text-white"
+                style={{
+                  textShadow: "0 0 30px rgba(200,148,62,0.4), 0 0 60px rgba(200,148,62,0.2), 0 4px 20px rgba(0,0,0,0.8)",
+                  backdropFilter: "blur(2px)",
+                  padding: "12px 24px",
+                  borderRadius: "8px",
+                  background: "rgba(0,0,0,0.25)"
+                }}
+              >
+                AI-продакшн полного цикла. Клипы. Реклама. Контент. Анимация.
+              </span>
+            </motion.div>
           </div>
 
           <div
@@ -123,19 +144,6 @@ export function Hero() {
       </div>
 
       <div className="relative z-20 mt-12 text-center px-6">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="font-sans text-[1.1rem] mb-8 leading-relaxed"
-          style={{
-            color: '#B0AAA0',
-            letterSpacing: '0.02em',
-          }}
-        >
-          Клипы, рекламные ролики, контент для маркетплейсов, Reels, монтаж — всё в одной студии
-        </motion.p>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
