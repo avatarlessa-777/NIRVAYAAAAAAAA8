@@ -103,20 +103,18 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Text block after banner with gold lines */}
-      <div className="flex flex-col items-center">
-        <div className="w-[80px] h-px my-6 md:my-8" style={{ background: "linear-gradient(to right, transparent, rgba(200,148,62,0.4), transparent)" }}></div>
-        <motion.p 
+      {/* Badge after banner */}
+      <div className="flex items-center justify-center py-8 md:py-10">
+        <motion.span 
           initial={{ opacity: 0, y: 10 }} 
           whileInView={{ opacity: 1, y: 0 }} 
           viewport={{ once: true }} 
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} 
-          className="text-xs md:text-sm lg:text-base uppercase tracking-[0.2em] text-center px-6" 
-          style={{ fontFamily: "var(--font-heading), 'Rajdhani', sans-serif", fontWeight: 500, color: "rgba(200,180,150,0.5)" }}
+          className="inline-block font-heading font-normal text-xs md:text-sm uppercase tracking-[0.2em] px-5 py-2 rounded-full" 
+          style={{ border: "1px solid rgba(200,148,62,0.2)", background: "rgba(14,18,37,0.8)", color: "rgba(200,148,62,0.75)" }}
         >
-          AI-продакшн полного цикла. Клипы. Реклама. Контент. Анимация.
-        </motion.p>
-        <div className="w-[80px] h-px my-6 md:my-8" style={{ background: "linear-gradient(to right, transparent, rgba(200,148,62,0.4), transparent)" }}></div>
+          AI-продакшн полного цикла • Клипы • Реклама • Контент • Анимация
+        </motion.span>
       </div>
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-[15]">
