@@ -3,6 +3,14 @@
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "mux-player": any
+    }
+  }
+}
+
 export function FaceTransfer() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
@@ -79,14 +87,14 @@ export function FaceTransfer() {
           </motion.div>
         </div>
 
-        {/* Row 1: Video 16:9 + Photo 1:1 */}
+        {/* Row 1: Мужик — Video 16:9 + Photo 1:1 */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-center mb-6"
         >
-          {/* Video placeholder 16:9 */}
+          {/* Video 16:9 — мужик */}
           <div
             className="relative aspect-video rounded-sm overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(200,148,62,0.15)]"
             style={{
@@ -94,11 +102,15 @@ export function FaceTransfer() {
               background: "rgba(14,18,37,0.6)",
             }}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center">
-                <div className="w-0 h-0 border-l-[8px] border-l-gold/60 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent ml-1" />
-              </div>
-            </div>
+            <mux-player
+              playback-id="82b8it1RsNkYbxBQOvDIgH8B28f7kUNzw1501a64pr1w"
+              autoplay="muted"
+              loop
+              muted
+              playsinline
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ "--controls": "none" }}
+            />
           </div>
 
           {/* Photo placeholder 1:1 */}
@@ -118,14 +130,14 @@ export function FaceTransfer() {
           </div>
         </motion.div>
 
-        {/* Row 2: Video 16:9 + Photo 1:1 */}
+        {/* Row 2: Женщина — Video 16:9 + Photo 1:1 */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.35 }}
           className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-center"
         >
-          {/* Video placeholder 16:9 */}
+          {/* Video 16:9 — женщина */}
           <div
             className="relative aspect-video rounded-sm overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(200,148,62,0.15)]"
             style={{
@@ -133,11 +145,15 @@ export function FaceTransfer() {
               background: "rgba(14,18,37,0.6)",
             }}
           >
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-12 h-12 rounded-full border border-gold/30 flex items-center justify-center">
-                <div className="w-0 h-0 border-l-[8px] border-l-gold/60 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent ml-1" />
-              </div>
-            </div>
+            <mux-player
+              playback-id="rXF01vqCO2S4l4gf7rtzakp9wVrCrLwIWHAObM02tf602A"
+              autoplay="muted"
+              loop
+              muted
+              playsinline
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ "--controls": "none" }}
+            />
           </div>
 
           {/* Photo placeholder 1:1 */}
