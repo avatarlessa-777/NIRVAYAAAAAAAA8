@@ -195,30 +195,51 @@ export function Portfolio() {
                   }}
                 >
                   {style.title === "Аниме" ? (
-                    <mux-player
-                      playback-id="ruEc7RibKqYuEgHZOCr02neU023n2NapHQURUhmmAiMXs"
-                      autoplay="muted"
-                      loop
-                      muted
-                      playsinline
-                      className="absolute inset-0 w-full h-full object-cover"
-                      style={{ "--controls": "none" }}
-                    />
-                  ) : style.title === "Пластилин" ? (
-                    <mux-player
-                      playback-id="01L3006COFbi91OPfx00j2pvvrbgqrj01GVBV7R3gYEDhhI"
-                      autoplay="muted"
-                      loop
-                      muted
-                      playsinline
-                      className="absolute inset-0 w-full h-full object-cover"
-                      style={{ "--controls": "none" }}
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center text-foreground-muted text-xs">
-                      Превью
-                    </div>
-                  )}
+  <mux-player
+    playback-id="ruEc7RibKqYuEgHZOCr02neU023n2NapHQURUhmmAiMXs"
+    autoplay="muted"
+    loop
+    muted
+    playsinline
+    className="absolute inset-0 w-full h-full object-cover"
+    style={{ "--controls": "none" }}
+  />
+) : style.title === "Пластилин" ? (
+  <mux-player
+    playback-id="01L3006COFbi91OPfx00j2pvvrbgqrj01GVBV7R3gYEDhhI"
+    autoplay="muted"
+    loop
+    muted
+    playsinline
+    className="absolute inset-0 w-full h-full object-cover"
+    style={{ "--controls": "none" }}
+  />
+) : style.title === "Pixar" ? (
+  <mux-player
+    playback-id="bLr2WJ4bPA01IiKZHdWQzjj244ucRE5972JdqCWGdpFk"
+    autoplay="muted"
+    loop
+    muted
+    playsinline
+    className="absolute inset-0 w-full h-full object-cover"
+    style={{ "--controls": "none" }}
+  />
+) : style.title === "Палех" ? (
+  <mux-player
+    playback-id="MNzC02eJ7sIJqlgGjDO8lJ02PBsBe6d9A92OqJz7XkmXo"
+    autoplay="muted"
+    loop
+    muted
+    playsinline
+    className="absolute inset-0 w-full h-full object-cover"
+    style={{ "--controls": "none" }}
+  />
+) : (
+  <div className="absolute inset-0 flex items-center justify-center text-foreground-muted text-xs">
+    Превью
+  </div>
+)}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E1A] via-[#0A0E1A]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-5 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                     <h4 className="font-heading font-semibold text-base md:text-lg uppercase tracking-wider text-gold mb-2">{style.title}</h4>
